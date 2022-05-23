@@ -16,6 +16,10 @@
     <header>
       <%= render 'shared/navbar' %>
     </header>
+    
+    <% if flash.any? %>
+      <p class="alert alert-info"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
