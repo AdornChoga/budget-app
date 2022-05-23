@@ -25,7 +25,7 @@
             <a class="nav-link" href="#">Share Promo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Log Out</a>
+            <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
           </li>
         </ul>
       </div>

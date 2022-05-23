@@ -15,3 +15,6 @@ example_id                                         | status | run_time        |
 ./spec/models/user_spec.rb[1:1:2]                  | passed | 0.00259 seconds |
 ./spec/models/user_spec.rb[1:2:1]                  | passed | 0.00261 seconds |
 ./spec/models/user_spec.rb[1:2:2]                  | passed | 0.0009 seconds  |
+./spec/requests/root_handler_spec.rb[1:1:1]        | passed | 0.0055 seconds  |
+./spec/requests/root_handler_spec.rb[1:2:1]        | passed | 0.09014 seconds |
+./spec/requests/splash_screen_spec.rb[1:1:1]       | failed | 0.06198 seconds |
