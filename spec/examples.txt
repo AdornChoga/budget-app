@@ -1,17 +1,17 @@
 example_id                                         | status | run_time        |
 -------------------------------------------------- | ------ | --------------- |
-./spec/models/category_spec.rb[1:1:1]              | passed | 0.01168 seconds |
-./spec/models/category_spec.rb[1:1:2]              | passed | 0.0049 seconds  |
-./spec/models/category_spec.rb[1:1:3]              | passed | 0.00458 seconds |
-./spec/models/category_spec.rb[1:1:4]              | passed | 0.00405 seconds |
-./spec/models/category_spec.rb[1:2:1]              | passed | 0.00287 seconds |
-./spec/models/category_spec.rb[1:2:2]              | passed | 0.00309 seconds |
-./spec/models/financial_transaction_spec.rb[1:1:1] | passed | 0.00566 seconds |
-./spec/models/financial_transaction_spec.rb[1:1:2] | passed | 0.00723 seconds |
-./spec/models/financial_transaction_spec.rb[1:1:3] | passed | 0.00711 seconds |
-./spec/models/financial_transaction_spec.rb[1:1:4] | passed | 0.00475 seconds |
-./spec/models/financial_transaction_spec.rb[1:2:1] | passed | 0.00542 seconds |
-./spec/models/user_spec.rb[1:1:1]                  | passed | 0.0269 seconds  |
-./spec/models/user_spec.rb[1:1:2]                  | passed | 0.00284 seconds |
-./spec/models/user_spec.rb[1:2:1]                  | passed | 0.00366 seconds |
-./spec/models/user_spec.rb[1:2:2]                  | passed | 0.00308 seconds |
+./spec/models/category_spec.rb[1:1:1]              | passed | 0.00768 seconds |
+./spec/models/category_spec.rb[1:1:2]              | passed | 0.00462 seconds |
+./spec/models/category_spec.rb[1:1:3]              | passed | 0.00468 seconds |
+./spec/models/category_spec.rb[1:1:4]              | passed | 0.00437 seconds |
+./spec/models/category_spec.rb[1:2:1]              | passed | 0.00238 seconds |
+./spec/models/category_spec.rb[1:2:2]              | passed | 0.00762 seconds |
+./spec/models/financial_transaction_spec.rb[1:1:1] | passed | 0.00531 seconds |
+./spec/models/financial_transaction_spec.rb[1:1:2] | passed | 0.01432 seconds |
+./spec/models/financial_transaction_spec.rb[1:1:3] | passed | 0.00488 seconds |
+./spec/models/financial_transaction_spec.rb[1:1:4] | passed | 0.00419 seconds |
+./spec/models/financial_transaction_spec.rb[1:2:1] | passed | 0.02221 seconds |
+./spec/models/user_spec.rb[1:1:1]                  | passed | 0.00269 seconds |
+./spec/models/user_spec.rb[1:1:2]                  | passed | 0.00259 seconds |
+./spec/models/user_spec.rb[1:2:1]                  | passed | 0.00261 seconds |
+./spec/models/user_spec.rb[1:2:2]                  | passed | 0.0009 seconds  |
