@@ -3,12 +3,6 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
   let(:category) { create(:category) }
   context "Attributes" do
-    it "is valid with a category attribute" do
-      expect(category).to be_valid
-    end
-    it "is valid with an icon attribute" do
-      expect(category).to be_valid
-    end
     it "is not valid without a category attribute" do
       category.name = nil
       expect(category).to be_invalid
