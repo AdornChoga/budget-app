@@ -13,12 +13,15 @@
   </head>
 
   <body>
-    <header>
-      <%= render 'shared/navbar' %>
-    </header>
+    
+    <% if current_user %>
+      <header>
+        <%= render 'shared/navbar' %>
+      </header>
+    <% end %>
+    
     <% if flash.any? %>
       <% flash.each do |type, msg| %>
-        <p><%= type %></p>
         <% if type == 'alert' %>
           <p class="alert alert-danger"><%= msg %></p>
         <% elsif type == 'notice' %>
