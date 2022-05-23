@@ -7,6 +7,10 @@ nav {
   background-color: #3678c2;
 }
 
+.top-margin {
+  margin-top: 90px;
+}
+
 .navbar {
   display: flex;
 }
