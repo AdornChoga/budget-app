@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  let(:category) { create(:category) }
+  let(:user) { create(:user) }
+  let(:category) { create(:category, user_id: user.id) }
   context "Attributes" do
     it "is not valid without a category attribute" do
       category.name = nil
@@ -17,5 +18,10 @@ RSpec.describe Category, type: :model do
     it "icon should be a string data type" do
       expect(category.icon).to be_kind_of(String)
     end
+  end
+
+  context "Associations" do
+    it { should belong_to(:user) }
+    it { should have_and_belong_to_many(:financial_transactions) }
   end
 end

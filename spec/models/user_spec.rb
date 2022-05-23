@@ -11,4 +11,9 @@ RSpec.describe User, type: :model do
       expect(user.name).to be_kind_of(String)
     end
   end
+
+  context "Associations" do
+    it { should have_many(:categories)}
+    it { should have_many(:financial_transactions)}
+  end
 end

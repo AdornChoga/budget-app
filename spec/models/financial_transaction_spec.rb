@@ -20,4 +20,8 @@ RSpec.describe FinancialTransaction, type: :model do
       expect(financial_transaction.amount).to be_kind_of(BigDecimal)
     end
   end
+
+  context "Associations" do
+    it { should belong_to(:user) }
+  end
 end
