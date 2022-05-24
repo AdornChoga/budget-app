@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Categories', type: :request do
   describe 'GET /index' do
     before(:each) do
-      get '/categories/index'
+      get '/categories'
     end
     it 'returns http success' do
       expect(response).to have_http_status(:success)

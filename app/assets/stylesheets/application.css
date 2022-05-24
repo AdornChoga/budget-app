@@ -118,6 +118,11 @@ nav {
   background-color: #fff;
 }
 
+.category-item a {
+  text-decoration: none;
+  color: black;
+}
+
 .category-item div {
   display: flex;
   align-items: center;
@@ -138,7 +143,8 @@ nav {
   margin: 0;
 }
 
-.new-category-btn {
+.new-category-btn,
+.new-trans-btn {
   position: fixed;
   bottom: 0;
   left: 0;

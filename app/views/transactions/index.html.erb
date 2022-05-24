@@ -1,0 +1,7 @@
+<%= render 'shared/logged_in_navbar', page: { title: 'Transactions', category_id: params  } %>
+<ul class="container-fluid-sm top-margin list-unstyled categories">
+  <% 10.times do %>
+    <%= render 'shared/transaction' %>
+  <% end %>
+</ul>
+<%= link_to 'New Transaction', new_category_transaction_path, class: "btn btn-success new-trans-btn" %>

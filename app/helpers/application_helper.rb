@@ -1,7 +1,6 @@
 module ApplicationHelper
-  def current_path?(path)
-    current_path = request.path
-    return true if path == current_path
+  def current_path?(controller, action)
+    return true if params[:controller] == controller and params[:action] == action
 
     false
   end
