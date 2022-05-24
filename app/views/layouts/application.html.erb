@@ -12,21 +12,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <% unless no_navbar? %>
-      <header>
-        <% if current_user %>
-          <%= render 'shared/logged_in_navbar' %>
-        <% end %>
-      </header>
-    <% end %>
-    
+  <body>    
     <% if flash.any? %>
       <% flash.each do |type, msg| %>
         <% if type == 'alert' %>
-          <p class="alert alert-danger"><%= msg %></p>
+          <p class="alert alert-danger mt-5"><%= msg %></p>
         <% elsif type == 'notice' %>
-          <p class="notice alert-info"><%= msg %></p>
+          <p class="notice alert-info mt-5"><%= msg %></p>
         <% end %>
       <% end %>
     <% end %>

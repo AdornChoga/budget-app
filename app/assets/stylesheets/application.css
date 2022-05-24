@@ -12,8 +12,15 @@ nav {
   margin-top: 90px;
 }
 
-.navbar {
+.nav-container {
   display: flex;
+}
+
+.nav-container > h3 {
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+  padding-right: 10%;
 }
 
 .brand-name {
@@ -97,6 +104,51 @@ nav {
 
 .login-form-cont a {
   color: grey;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px 40px 10px;
+}
+
+.category-item {
+  padding: 10px 4px;
+  background-color: #fff;
+}
+
+.category-item div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.category-item h4 {
+  margin: 0;
+}
+
+.category-item p {
+  text-align: right;
+  margin: 0;
+}
+
+.new-category-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.create-category-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 8px 20px;
 }
 
 @media screen and (max-width: 768px) {
