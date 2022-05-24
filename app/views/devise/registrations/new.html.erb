@@ -1,6 +1,5 @@
-<div class="container top-margin">
-  <h2>Sign up</h2>
-  
+<%= render partial: 'shared/unsigned_in_navbar', locals: { title: 'Register', submit_btn_text: 'Next' } %>
+<div class="container top-margin">  
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
   
@@ -25,10 +24,6 @@
     <div class="field">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-  
-    <div class="actions">
-      <%= f.submit "Sign up" %>
     </div>
   <% end %>
   

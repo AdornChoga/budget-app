@@ -13,13 +13,10 @@
   </head>
 
   <body>
-    
     <% unless no_navbar? %>
       <header>
         <% if current_user %>
           <%= render 'shared/logged_in_navbar' %>
-        <% else %>
-          <%= render 'shared/unsigned_in_navbar' %>
         <% end %>
       </header>
     <% end %>
