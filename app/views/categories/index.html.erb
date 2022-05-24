@@ -1,7 +1,7 @@
 <%= render 'shared/logged_in_navbar', page: { title: 'Categories' } %>
 <ul class="container-fluid-sm top-margin list-unstyled categories">
-  <% 10.times do %>
-    <%= render 'shared/category' %>
+  <% @categories.each do |category| %>
+    <%= render 'shared/category', category: category %>
   <% end %>
 </ul>
 <%= link_to 'New Category', new_category_path, class: "btn btn-success new-category-btn" %>

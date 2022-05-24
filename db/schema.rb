@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_150252) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.string "icon", default: "https://icon2.cleanpng.com/20180216/gaw/kisspng-question-mark-clip-art-question-mark-images-5a87a71b595fd8.4163604515188395793661.jpg"
+    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false

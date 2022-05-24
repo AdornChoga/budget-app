@@ -1,13 +1,17 @@
 class CategoriesController < ApplicationController
   before_action :create_category, only: [:create]
 
-  def index; end
+  def index
+    @categories = Category.all
+  end
 
   def new
     @category = Category.new
   end
 
   def create
+    default_icon = 'https://icon2.cleanpng.com/20180216/gaw/kisspng-question-mark-clip-art-question-mark-images-5a87a71b595fd8.4163604515188395793661.jpg'
+    @category.icon = default_icon if @category.icon.nil?
     @category.user = current_user
     if @category.save
       flash[:notice] = 'Category was successfully created'

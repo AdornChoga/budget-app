@@ -24,4 +24,15 @@ RSpec.describe Category, type: :model do
     it { should belong_to(:user) }
     it { should have_and_belong_to_many(:financial_transactions) }
   end
+
+  context 'Methods' do
+    before(:each) do
+      @financial_transaction = create(:financial_transaction, user_id: user.id)
+      @financial_transaction.categories << category
+    end
+    it 'returns total transanctions amounting to $1' do
+      total_trans = category.total_transactions
+      expect(total_trans).to eq 1
+    end
+  end
 end

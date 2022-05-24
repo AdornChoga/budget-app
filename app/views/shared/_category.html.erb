@@ -1,7 +1,7 @@
 <li class="border category-item">
   <div>
-    <img src="https://icon2.cleanpng.com/20180216/gaw/kisspng-question-mark-clip-art-question-mark-images-5a87a71b595fd8.4163604515188395793661.jpg" alt="category_icon">
-    <h4>Category Name</h4>
+    <img src="<%= category.icon %>" alt="category_icon">
+    <h4><%= category.name %></h4>
   </div>
-  <p>Total: $100</p>
+  <p class="px-3">Total: $<%= category.total_transactions %></p>
 </li>
