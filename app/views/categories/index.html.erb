@@ -4,4 +4,4 @@
     <%= render 'shared/category' %>
   <% end %>
 </ul>
-<button type="button" class="btn btn-success new-category-btn">New Category</button>
+<%= link_to 'New Category', new_category_path, class: "btn btn-success new-category-btn" %>
