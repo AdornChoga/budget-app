@@ -1,0 +1,9 @@
+<nav class="navbar fixed-top navbar-light text-light">
+  <div class="unsigned_in_navbar">
+    <%= link_to root_path, class: 'text-light' do %>
+      <i class="fa-solid fa-arrow-left fa-xl"></i>
+    <% end %>
+    <h3 class="nav-title"><%= title.upcase %></h3>
+    <button type="submit" class="log-in-btn text-light" form="new_user"><%= submit_btn_text %></button>
+  </div>
+</nav>

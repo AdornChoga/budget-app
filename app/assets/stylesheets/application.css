@@ -7,6 +7,10 @@ nav {
   background-color: #3678c2;
 }
 
+.top-margin {
+  margin-top: 90px;
+}
+
 .navbar {
   display: flex;
 }
@@ -16,6 +20,18 @@ nav {
   font-weight: bold;
   font-size: 25px;
   color: white;
+}
+
+.unsigned_in_navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.nav-title {
+  margin: 0;
 }
 
 .profile-photo {
@@ -57,6 +73,12 @@ nav {
 
 .splash-screen-register {
   color: black;
+}
+
+.log-in-btn {
+  border: none;
+  background-color: #3678c2;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 768px) {
