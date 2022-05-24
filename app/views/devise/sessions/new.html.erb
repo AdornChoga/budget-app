@@ -1,22 +1,15 @@
 <%= render partial: 'shared/unsigned_in_navbar', locals: { title: 'Log In', submit_btn_text: 'Log In' } %>
-<div class="container top-margin">
+<div class="container-fluid-sm top-margin login-form-cont">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "w-100 p-3" %>
     </div>
-  
+
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "w-100 p-3" %>
     </div>
-  
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
-    <% end %>
   <% end %>
-  <%= render "devise/shared/links" %>
+  <div class="text-center mt-4">
+    <a href="/user/password/new">Forgot password?</a>
+  </div>
 </div>
