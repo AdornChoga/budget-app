@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f5f6f8;
 }
 
 nav {
@@ -79,6 +80,23 @@ nav {
   border: none;
   background-color: #3678c2;
   font-size: 22px;
+}
+
+.login-form-cont,
+.sign-up-form-cont {
+  border-top: 1px solid #efeff1;
+}
+
+.login-form-cont input,
+.sign-up-form-cont input {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #efeff1;
+}
+
+.login-form-cont a {
+  color: grey;
 }
 
 @media screen and (max-width: 768px) {
