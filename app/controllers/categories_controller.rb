@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
 
   def create
     default_icon = 'https://icon2.cleanpng.com/20180216/gaw/kisspng-question-mark-clip-art-question-mark-images-5a87a71b595fd8.4163604515188395793661.jpg'
-    @category.icon = default_icon if @category.icon.nil?
+    @category.icon = default_icon if params[:category][:icon].blank?
     @category.user = current_user
     if @category.save
       flash[:notice] = 'Category was successfully created'
