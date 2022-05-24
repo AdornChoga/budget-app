@@ -82,18 +82,20 @@ nav {
   font-size: 22px;
 }
 
-.login-form-cont {
+.login-form-cont,
+.sign-up-form-cont {
   border-top: 1px solid #efeff1;
 }
 
-.login-form-cont input {
+.login-form-cont input,
+.sign-up-form-cont input {
   background-color: #fff;
   outline: none;
   border: none;
   border-bottom: 1px solid #efeff1;
 }
 
-.login-form-cont * {
+.login-form-cont a {
   color: grey;
 }
 
