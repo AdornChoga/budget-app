@@ -1,9 +1,10 @@
 <nav class="navbar navbar-light fixed-top">
-  <div class="container-fluid navbar">
+  <div class="container-fluid nav-container">
     <%= link_to 'BudgetApp', root_path, class: "brand-name" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <h3><%= page[:title] %></h3>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header d-flex justify-content-end">
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
