@@ -1,0 +1,16 @@
+<%= render 'shared/logged_in_navbar', page: { title: 'New Transaction' } %>
+<div class="container-fluid-sm top-margin login-form-cont">
+  <%= form_with model: [@category,@financial_transaction] do |f| %>
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, placeholder: "Transaction Name", class: "w-100 p-3" %>
+    </div>
+
+    <div class="field">
+      <%= f.number_field :amount, placeholder: "Amount ($)", class: "w-100 p-3" %>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-success create-category-btn">Create</button>
+    </div>
+  <% end %>
+</div>

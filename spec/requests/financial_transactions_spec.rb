@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'Transactions', type: :request do
+RSpec.describe 'FinancialTransactions', type: :request do
   before(:each) do
     @user = create(:user)
     @category = create(:category, user_id: @user.id)
   end
   describe 'GET /index' do
-    before(:example) { get category_transactions_path(@category.id) }
+    before(:example) { get category_financial_transactions_path(@category.id) }
 
     it 'returns http success' do
       expect(response).to have_http_status(:success)
@@ -19,10 +19,10 @@ RSpec.describe 'Transactions', type: :request do
     end
   end
 
-  describe "GET /new" do
-    before(:example) { get new_category_transaction_path(@category.id) }
+  describe 'GET /new' do
+    before(:example) { get new_category_financial_transaction_path(@category.id) }
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
     it 'renders the new category page' do
@@ -32,11 +32,4 @@ RSpec.describe 'Transactions', type: :request do
       expect(response.body).to include 'New Transaction'
     end
   end
-
-  # describe "GET /create" do
-  #   it "returns http success" do
-  #     get "/transactions/create"
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
 end

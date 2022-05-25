@@ -1,6 +1,9 @@
-class TransactionsController < ApplicationController
+class FinancialTransactionsController < ApplicationController
   before_action :create_transaction, only: [:create]
-  def index; end
+  before_action :find_category
+  def index
+    @financial_transactions = @category.financial_transactions
+  end
 
   def new
     @financial_transaction = FinancialTransaction.new
@@ -8,12 +11,13 @@ class TransactionsController < ApplicationController
 
   def create
     @financial_transaction.user = current_user
+    @financial_transaction.categories << @category
     if @financial_transaction.save
       flash[:notice] = 'Transaction created successfully'
-      redirect_to category_transactions_path(params[:category_id])
+      redirect_to category_financial_transactions_path(params[:category_id])
     else
       flash[:alert] = @financial_transaction.errors.first.full_message.to_s if @financial_transaction.errors.any?
-      redirect_to new_category_transaction_path
+      redirect_to new_category_financial_transaction_path
     end
   end
 
@@ -23,7 +27,11 @@ class TransactionsController < ApplicationController
     @financial_transaction = FinancialTransaction.create(transaction_params)
   end
 
+  def find_category
+    @category = Category.find(params[:category_id])
+  end
+
   def transaction_params
-    params.require(:final_transaction).permit(:name, :amount)
+    params.require(:financial_transaction).permit(:name, :amount)
   end
 end

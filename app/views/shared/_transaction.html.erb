@@ -1,7 +1,10 @@
-<li class="border category-item">
-  <div>
-    <img src="<%= Category.find(params[:category_id]).icon %>" alt="category_icon">
-      <h4>Transaction Name</h4>
+<li class="border transaction">
+  <img src="<%= @category.icon %>" alt="category_icon">
+  <div class="d-flex flex-column w-100">
+    <div class="d-flex justify-content-between">
+      <h4><%= financial_transaction.name %></h4>
+      <p class="px-3 amount">$<%= financial_transaction.amount %></p>
     </div>
-  <p class="px-3">Total: $ 10</p>
+    <span class="">Date</span>
+  </div>
 </li>
