@@ -1,13 +1,5 @@
 require 'rails_helper'
 
-# transactions index page:
-#   clicking on new transaction should redirect to new transaction form
-
-# transactions new page:
-#   submitting the form without a name should throw an error
-#   submitting the form without an amount should throw an error
-#   submitting the from with correct details should redirect to transactions index page
-
 RSpec.describe 'FinancialTransactionsPages', type: :system do
   before do
     driven_by(:rack_test)
