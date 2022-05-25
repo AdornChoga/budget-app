@@ -5,34 +5,28 @@ RSpec.describe 'CategoriesPages', type: :system do
     driven_by(:rack_test)
   end
 
+  before(:each) do
+    @user = create(:user, email: 'test@example.com')
+    @category = create(:category, user_id: @user.id)
+    login_as @user
+  end
+
   describe 'Visit categories index page' do
-    before(:each) do
-      visit 'user/sign_in'
-      @user = create(:user, email: 'test@example.com')
-      @category = create(:category, user_id: @user.id)
-      login_as @user
-      visit '/categories'
-    end
+    before(:each) { visit '/categories' }
 
     it 'should redirect to transactions index page' do
       click_link(@category.id.to_s)
       expect(page).to have_current_path("/categories/#{@category.id}/financial_transactions")
     end
 
-    it 'should redirect to categoryies new page' do
+    it 'should redirect to categories new page' do
       click_link 'New Category'
       expect(page).to have_current_path('/categories/new')
     end
   end
 
   describe 'Visit categories new page' do
-    before(:each) do
-      visit 'user/sign_in'
-      @user = create(:user, email: 'test@example.com')
-      @category = create(:category, user_id: @user.id)
-      login_as @user
-      visit '/categories/new'
-    end
+    before(:each) { visit '/categories/new' }
 
     it 'displays an error message is name field is blank' do
       click_button 'Create'

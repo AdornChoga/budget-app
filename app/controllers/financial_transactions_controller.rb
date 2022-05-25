@@ -15,7 +15,7 @@ class FinancialTransactionsController < ApplicationController
     @financial_transaction.user = current_user
     @financial_transaction.categories << @category
     if @financial_transaction.save
-      flash[:notice] = 'Transaction created successfully'
+      flash[:notice] = 'Transaction was created successfully'
       redirect_to category_financial_transactions_path(params[:category_id])
     else
       flash[:alert] = @financial_transaction.errors.first.full_message.to_s if @financial_transaction.errors.any?
