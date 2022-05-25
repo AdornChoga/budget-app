@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :create_category, only: [:create]
 
   def index
-    @categories = Category.all
+    @categories = current_user.categories
   end
 
   def new

@@ -1,9 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
+  before(:each) do
+    @user = create(:user)
+    login_as @user
+  end
   describe 'GET /index' do
     before(:each) do
-      get '/categories/index'
+      get '/categories'
     end
     it 'returns http success' do
       expect(response).to have_http_status(:success)

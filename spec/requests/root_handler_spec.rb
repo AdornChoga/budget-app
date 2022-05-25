@@ -16,7 +16,7 @@ RSpec.describe 'RootHandlers', type: :request do
       get root_path
     end
     it 'should redirect to categories index page' do
-      expect(@responce).to redirect_to(categories_index_path)
+      expect(@responce).to redirect_to(categories_path)
     end
   end
 end
