@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-  before(:each) do
+  before(:all) do
     @user = create(:user)
-    login_as @user
   end
   describe 'GET /index' do
     before(:each) do
+      login_as @user
       get '/categories'
     end
     it 'returns http success' do
@@ -22,6 +22,7 @@ RSpec.describe 'Categories', type: :request do
 
   describe 'GET /new' do
     before(:each) do
+      login_as @user
       get '/categories/new'
     end
     it 'returns http success' do

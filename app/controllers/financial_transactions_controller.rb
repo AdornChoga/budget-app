@@ -1,6 +1,8 @@
 class FinancialTransactionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :create_transaction, only: [:create]
   before_action :find_category
+
   def index
     @financial_transactions = @category.financial_transactions
   end
@@ -13,7 +15,7 @@ class FinancialTransactionsController < ApplicationController
     @financial_transaction.user = current_user
     @financial_transaction.categories << @category
     if @financial_transaction.save
-      flash[:notice] = 'Transaction created successfully'
+      flash[:notice] = 'Transaction was created successfully'
       redirect_to category_financial_transactions_path(params[:category_id])
     else
       flash[:alert] = @financial_transaction.errors.first.full_message.to_s if @financial_transaction.errors.any?
