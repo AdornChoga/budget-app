@@ -1,9 +1,5 @@
 require 'rails_helper'
 
-# splash screen:
-#   clicking on log in should route to login page
-#   clikcing on sign up should route to sign-up page
-
 RSpec.describe 'SplashScreens', type: :system do
   before do
     driven_by(:rack_test)
