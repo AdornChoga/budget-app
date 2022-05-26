@@ -9,8 +9,10 @@
         <div class="offcanvas-header d-flex justify-content-end">
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <span class="profile-photo"></span>
-        <p>User Name</p>
+        <div class="profile-container">
+          <%= image_tag current_user.image, class: "profile-image" %>
+          <p><%= current_user.name %></p>
+        </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
