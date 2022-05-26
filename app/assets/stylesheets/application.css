@@ -42,9 +42,13 @@ nav {
   margin: 0;
 }
 
-.profile-photo {
-  width: 50px;
-  height: 50px;
+.profile-container {
+  text-align: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
   background-color: royalblue;
   border-radius: 50%;
 }
