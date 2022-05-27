@@ -102,6 +102,8 @@ Rails.application.configure do
     user_name:            Rails.application.credentials.dig(:gmail_sender, :email),
     password:             Rails.application.credentials.dig(:gmail_sender, :password),
     authentication:       'plain',
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5
   }
 end
