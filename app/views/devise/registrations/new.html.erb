@@ -3,8 +3,16 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-      <%= f.file_field :image, class: "w-100 p-3" %>
+    <div class="field p-3">
+      <span>
+        <i class="fa-solid fa-user fa-3x"></i>
+      </span>
+      <label class="btn-primary p-1 rounded mx-4">
+        Upload new image
+        <span style="display:none;">
+          <%= f.file_field :image %>
+        </span>
+      </label>
     </div>
 
      <div class="field">

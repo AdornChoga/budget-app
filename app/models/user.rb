@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :financial_transactions, dependent: :destroy
   has_one_attached :image, dependent: :destroy
   validates :name, presence: true
+  validates :image, presence: true
 end
