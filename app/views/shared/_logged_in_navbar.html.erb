@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light fixed-top">
   <div class="container-fluid nav-container">
     <%= link_to 'BudgetApp', root_path, class: "brand-name" %>
+    <h3><%= page[:title] %></h3> 
     <% if current_path?("categories","index") %>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -10,8 +11,12 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="profile-container">
-          <%= image_tag current_user.image, class: "profile-image" %>
-          <p><%= current_user.name %></p>
+          <% if current_user.image.attached? %>
+            <%= image_tag current_user.image, class: "profile-image" %>
+          <% else %>
+            <i class="fa-solid fa-user fa-3x"></i>
+          <% end %>
+          <p class="text-light"><%= current_user.name %></p>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -38,7 +43,6 @@
         <i class="fa-solid fa-arrow-left fa-xl"></i>
       <% end %>
     <% end %>
-    <h3><%= page[:title] %></h3>
   </div>
   <% if current_path?("transactions", "index") %>
     <span class="text-center w-100">Total Amount: $ 100</span>

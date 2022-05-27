@@ -8,6 +8,14 @@ nav {
   background-color: #3678c2;
 }
 
+.nav-link {
+  color: white !important;
+}
+
+.offcanvas {
+  background-color: #163b68;
+}
+
 .top-margin {
   margin-top: 90px;
 }
@@ -100,6 +108,8 @@ nav {
 
 .login-form-cont input,
 .sign-up-form-cont input {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   outline: none;
   border: none;
@@ -150,10 +160,13 @@ nav {
 
 .new-category-btn,
 .new-trans-btn {
+  background-color: #60b625;
+  padding: 10px;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  color: white;
 }
 
 .create-category-btn {
@@ -169,5 +182,9 @@ nav {
 
   .splash-buttons > * {
     width: 90vw;
+  }
+
+  .nav-container {
+    flex-direction: row-reverse;
   }
 }
