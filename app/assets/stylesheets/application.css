@@ -150,10 +150,13 @@ nav {
 
 .new-category-btn,
 .new-trans-btn {
+  background-color: #60B625;
+  padding: 10px;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  color: white;
 }
 
 .create-category-btn {
