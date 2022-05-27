@@ -8,6 +8,14 @@ nav {
   background-color: #3678c2;
 }
 
+.nav-link {
+  color: white !important;
+}
+
+.offcanvas {
+  background-color: #163B68;
+}
+
 .top-margin {
   margin-top: 90px;
 }
@@ -172,5 +180,9 @@ nav {
 
   .splash-buttons > * {
     width: 90vw;
+  }
+
+  .nav-container {
+    flex-direction: row-reverse;
   }
 }
