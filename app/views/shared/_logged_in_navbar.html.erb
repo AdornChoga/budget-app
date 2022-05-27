@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light fixed-top">
   <div class="container-fluid nav-container">
     <%= link_to 'BudgetApp', root_path, class: "brand-name" %>
-    <h3><%= page[:title] %></h3> 
+    <h3><%= page[:title] %></h3>
     <% if current_path?("categories","index") %>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
       <% end %>
     <% end %>
   </div>
-  <% if current_path?("transactions", "index") %>
-    <span class="text-center w-100">Total Amount: $ 100</span>
+  <% if current_path?("financial_transactions", "index") %>
+    <span class="text-center text-warning w-100">Total: $<%= page[:total] %></span>
   <% end %>
 </nav>
