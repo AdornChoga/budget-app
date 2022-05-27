@@ -67,8 +67,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'bullet', '~> 7.0'
   gem 'letter_opener'
-  gem "bullet", "~> 7.0"
 end
 
 group :test do
@@ -84,4 +84,3 @@ end
 gem 'devise', '~> 4.8'
 
 gem 'aws-sdk-s3'
-

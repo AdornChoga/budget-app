@@ -1,4 +1,5 @@
-<%= render 'shared/logged_in_navbar', page: { title: 'Transactions', category_id: params  } %>
+<%= render 'shared/logged_in_navbar', page: { title: 'Transactions', total: @category.total_transactions  } %>
+
 <ul class="container-fluid-sm top-margin list-unstyled categories">
   <% @financial_transactions.each do |financial_transaction| %>
     <%= render 'shared/transaction', financial_transaction: financial_transaction %>
